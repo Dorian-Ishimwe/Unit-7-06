@@ -1,14 +1,13 @@
-var myAge = 15
+const myAge = 15
 let userInput = 0
 document.getElementById('button').addEventListener('click', gameAge)
 
 function gameAge () {
   userInput = document.getElementById('age').value
   userInput = parseInt(userInput)
-
-  while (userInput == myAge) {
-    guess = prompt('guess my age')
-    if (userInput == myAge) {
+  while (userInput === myAge) {
+    userInput = prompt('guess my age')
+    if (userInput === myAge) {
       document.getElementById('answer').innerHTML = 'You are right'
     } else {
       if (userInput < myAge) {
@@ -21,5 +20,5 @@ function gameAge () {
         }
       }
     }
-  } 
+  }
 }
