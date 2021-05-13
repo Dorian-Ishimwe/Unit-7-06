@@ -1,17 +1,25 @@
 var myAge = 15
-let guess = 0
-document.getElementById('enter').addEventListener('click', findAge)
+let userInput = 0
+document.getElementById('button').addEventListener('click', gameAge)
 
-function findAge () { {
-    myAge = document.getElementById('age').value
-    guess = parseInt(myAge)
-  if (myAge = guess) {
-     document.getElementById('answer').innerHTML = 'You got it right!'
-    } else if (guess < myAge); {
-     document.getElementById('answer').innerHTML = 'Your guess is too small, try again'
-    } else (guess < myAge); {
-     document.getElementById('answer').innerHTML = 'Your guess is too big, try again'
-   } 
-  }
+function gameAge () {
+  userInput = document.getElementById('age').value
+  userInput = parseInt(userInput)
+
+  while (userInput == myAge) {
+    guess = prompt('guess my age')
+    if (userInput == myAge) {
+      document.getElementById('answer').innerHTML = 'You are right'
+    } else {
+      if (userInput < myAge) {
+        document.getElemenyById('answer').innerHTML = 'answer is too small'
+      } else {
+        if (userInput > myAge) {
+          document.getElementById('answer').innerHTML = 'answer is too big'
+        } else {
+          document.getElemenyById('answer').innerHTML = 'invalid answer'
+        }
+      }
+    }
+  } 
 }
-
