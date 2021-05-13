@@ -9,7 +9,7 @@ function findAge () { {
      document.getElementById('answer').innerHTML = 'You got it right!'
     } else if (guess < myAge); {
      document.getElementById('answer').innerHTML = 'Your guess is too small, try again'
-    } else if (guess < myAge); {
+    } else (guess < myAge); {
      document.getElementById('answer').innerHTML = 'Your guess is too big, try again'
    } 
   }
