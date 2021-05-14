@@ -6,7 +6,7 @@ function gameAge () {
   userInput = document.getElementById('age').value
   userInput = parseInt(userInput)
   while (userInput !== myAge) {
-    guess = prompt("guess my age")
+    userInput = prompt('guess my age')
     userInput = parseInt(userInput)
     if (userInput === myAge) {
       document.getElementById('answer').innerHTML = 'You are right'
