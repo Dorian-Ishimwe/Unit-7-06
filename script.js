@@ -5,18 +5,19 @@ document.getElementById('button').addEventListener('click', gameAge)
 function gameAge () {
   userInput = document.getElementById('age').value
   userInput = parseInt(userInput)
-  while (userInput === myAge) {
-    userInput = prompt('guess my age')
+  while (userInput !== myAge) {
+    guess = prompt("guess my age")
+    userInput = parseInt(userInput)
     if (userInput === myAge) {
       document.getElementById('answer').innerHTML = 'You are right'
     } else {
       if (userInput < myAge) {
-        document.getElemenyById('answer').innerHTML = 'answer is too small'
+        document.getElementById('answer').innerHTML = 'answer is too small'
       } else {
         if (userInput > myAge) {
           document.getElementById('answer').innerHTML = 'answer is too big'
         } else {
-          document.getElemenyById('answer').innerHTML = 'invalid answer'
+          document.getElementById('answer').innerHTML = 'invalid answer'
         }
       }
     }
